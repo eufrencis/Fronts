@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Satisfy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --preto: black;
+  --branco: white;
+  --cinza: rgb(179, 177, 177);
+  --rosa: rgb(231, 14, 116);
+  --verde: green;
+  --verdeclaro: rgb(81, 189, 81);
+  --corprojeto1: rgb(172, 10, 10);
+  --corprojeto2: rgb(224, 16, 16);
+  --corprojeto3: rgb(151, 42, 42);
+  --corprojeto4: rgb(170, 170, 21);
+  --corprojeto5: rgb(247, 247, 7);
+  --corprojeto6: rgb(255, 136, 0);
+  --violt: rgb(238, 130, 238);
+  --orchd: rgb(218, 112, 214);
+  --viodk: rgb(148, 0, 211);
+  --indig: rgb(75, 0, 130);
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1em;
+  scroll-behavior: smooth;
+} /* em: adapta aos tamanhos de telas 1em equivale a mais ou menos 16px tamanho padrao*/
+
+body {
+  background-color: var(--branco);
+}
+
+header {
+  background: linear-gradient(rgba(238, 130, 238, 0.8), rgba(218, 112, 214, 0.8));
+
+  /* O SEGREDO: Esse filtro faz o conteúdo atrás do header ficar embaçado */
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); /* Para funcionar no Safari/iPhone */
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: var(--branco);
+  padding: auto;
+  padding-bottom: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+}
+
+main {
+  background-color: var(--branco);
+  padding: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1024px;
+  margin-top: 2%;
+  margin-bottom: 3.8%;
+  /* Sombra do main posivito e negativo muda onde a sombra esta*/
+}
+
+article {
+  text-align: justify;
+}
+
+ul {
+  padding-left: 2%;
+}
+
+aside {
+  background-color: var(--branco);
+  padding: 1.5%;
+  margin: auto;
+  max-width: 1024px;
+  margin-top: 2%;
+  margin-bottom: 3.8%;
+}
+
+h1 {
+}
+aside h2 {
+  text-align: center;
+}
+
+h3 {
+  font-family: "Satisfy", cursive;
+  font-size: 3rem;
+  text-shadow: 1px 1px 2px var(--preto);
+}
+
+.video {
+  display: block;
+  margin: auto;
+  width: 560px;
+  height: 315px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.grid-conteudo {
+  background-color: var(--branco);
+  margin-top: 2px;
+  padding: 2px;
+} /* id vc usa o # pra referenciar aq e a classe usa . */
+
+.gridtopo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  /* Cria modelo de colunas responsiva onde se tiver em sites com telas maiores ele vai se comportar normal com 300px 
+   e em telas menores ele vai identificar o tamanho da tela e vai comecar a fazer a coluna com oq cabe na tela;*/
+  max-width: 1024px;
+  margin: auto;
+  gap: 10px;
+  height: auto;
+}
+a{
+  text-decoration: none;
+  color: var(--branco);
+  text-align: center
+
+}
+a:hover{background-color: var(--viodk); font-size: 1.25rem;}
+
+.btn{
+  display: block;
+  width: 160px;
+  background-color: var(--indig);
+  padding: 3px 25px ;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  margin: auto;
+  margin-top: 55px;
+
+}
+
+.grid img {
+  display: block;
+  margin: 0 auto; /* Margem automática nas laterais */
+  max-width: 100%; /* Não deixa a imagem "vazar" da tela */
+  height: auto;
+}
+
+#whats {
+  width: 90px;
+  height: 40px;
+  right: -50px;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  margin: 6rem;
+  p{color: black};
+}
+
+/* Flex-box */
+
+.gridbaixo {
+  display: flex;
+  justify-content: center; /*Centralizando horizontalmente*/
+  align-items: center; /* Centralizando verticalmente*/
+  flex-wrap: wrap; /* Alinhar ou quebrar de acordo com tamanho da tela* dps pesquisar a diferenca desse pro grid template*/
+  max-width: 100%;
+  gap: 8px;
+  padding: auto;
+}
+
+footer {
+  background: linear-gradient(var(--orchd), var(--violt));
+  color: var(--branco);
+  color: var(--branco);
+  padding: auto;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+}
+
+@media (max-width: 700px) {
+  header {
+    /* Fixed arranca o elemento do fluxo e prende na tela */
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Garante que fique na frente de fotos e vídeos */
+
+    /* Opcional: melhora a visualização no celular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .grid-conteudo {
+    margin-top: 130px !important; /* Aumente esse valor se o header for alto */
+  }
+  .gridtopo {
+    display: flex; /* No mobile, o flexbox costuma ser mais simples de alinhar */
+    flex-direction: column; /* Coloca um embaixo do outro */
+    align-items: center; /* Centraliza na horizontal */
+    text-align: center; /* Centraliza o texto que vem depois da imagem */
+  }
+
+  /* 2. Garante que a imagem não ultrapasse o tamanho da tela e fique centralizada */
+  .grid img {
+    display: block;
+    margin: 0 auto; /* Margem automática nas laterais */
+    max-width: 100%; /* Não deixa a imagem "vazar" da tela */
+    height: auto;
+  }
+
+  ul {
+    padding-left: 5%;
+  }
+
+  div.video {
+    position: relative; /* Leva em consideração relativa dentro da div */
+    padding-bottom: 56.25%;
+    background-color: var(--violt);
+    border-radius: 15px;
+    overflow: hidden;
+
+    width: 95%; /* Deixa um pequeno respiro nas laterais do celular */
+    margin: 20px auto; /* Centraliza o vídeo e dá espaço em cima/embaixo */
+    border: 6px solid var(--violt);
+  }
+
+  div.video > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  #whats {
+    width: 80px; /* Faz a div ter apenas o tamanho do conteúdo */
+    height: 30px;
+    bottom: 5px;
+    margin-left: auto; /* Empurra tudo para a direita */
+    margin-right: 70px; /* Distância da borda direita da tela */
+    font-size: small;
+    p{color: black};
+    z-index: 9999;
+  }
+}
