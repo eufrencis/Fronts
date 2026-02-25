@@ -8,6 +8,7 @@
     <!-- digite link e escolha favicon para mudar a img da aba da pagina. Img tem que estar em fomato ICO-->
     <title>Saúde & Beleza</title>
     <link rel="stylesheet" href="css/Estilo.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <header>
@@ -29,15 +30,40 @@
     <section class="grid-conteudo">
       <div class="gridtopo">
         <div>
-          <img src="img/topo-site.webp" alt="Enfermeira Saúde e Beleza" />
+          <img class="img-site" src="img/topo-site.webp" alt="Enfermeira Saúde e Beleza" />
         </div>
         <div>
           <h1>Agende sua avaliação hoje mesmo.</h1>
-          <br />
-          <h2>Seja a Sua Prioridade</h2>
+          <br>
+          <h2>Seja a sua prioridade, cuide da sua saúde e bem estar e tenha uma vida plena</h2>
+
+          <script>
+
+            function escrita (elemento){
+              const textoArray = elemento.innerHTML.split('');
+              elemento.innerHTML = '';
+
+              textoArray.forEach((letra, i) => {
+                setTimeout(function(){
+                  elemento.innerHTML += letra;
+                }, 80*i)
+              });
+
+            }
+
+            const animacao = document.querySelector('h2');
+            escrita(animacao);
+
+
+
+          </script>
+
+
+
+          <br>
           <p>
             O autocuidade é um ato de amor própio, priorize-se e cuide de sí
-            mesmo. <br />
+            mesmo. <br>
             Descubra como o bem-estar pessoal pode irradiar para todas as áreas
             da sua vida;
           </p>
@@ -82,7 +108,7 @@
         <br>
 
         <h2>Nossos Serviços</h2>
-        <br />
+        <br>
         <p>
           <ul>
               <li>
@@ -115,10 +141,30 @@
           </ul>
         </p>
 
-        <br />
+        <br> <br>
+
+        <p id="servicos"> CLIQUE EM AGENDAR E GANHE UMA SESSÃO GRÁTIS</p>
+
+        <br>
+
+        <section id = "grid-equipe"> <!-- é um conteudo a mais relacionado. Diferença entre id e a class: class se utiliza em diversos pontos do site o id é algo único -->
+
+            <div class="gridbaixo">
+
+                <div> <img src="img/facial.webp" alt="Facial"> <a class="btn" href="#">Agendar</a> <br> </div>
+                <div> <img src="img/cabelo.webp" alt="Cabelo"> <a class="btn" href="#"> Agendar</a> <br> </div>
+                <div> <img src="img/relaxamento.webp" alt="Relaxamento"> <a class="btn" href="#"> Agendar</a> <br>  </div>
+                
+
+            </div>
+
+        </section>
+        <br>
+
+        <br>
 
         <h2>Nossa Missão</h2>
-        <br />
+        <br>
 
         <p>
           Queremos fazer parte da sua jornada de autocuidado, oferecendo mais
@@ -141,9 +187,9 @@
 
             <div class="gridbaixo">
 
-                <div> <img src="img/equipe1.webp" alt="Funcionario 1"></div>
-                <div> <img src="img/equipe2.webp" alt="Funcionario 2"></div>
-                <div> <img src="img/equipe3.webp" alt="Funcionario 3"></div>
+                <div> <img src="img/equipe1.webp" alt="Funcionario 1"> <a class="btn" href="#"> Dra. Aline</a> <br> <p> Cuidados Capilares</p></div>
+                <div> <img src="img/equipe2.webp" alt="Funcionario 2"> <a class="btn" href="#"> Dra. Jéssica</a> <br> <p>Estética Facial e Corporal</p> </div>
+                <div> <img src="img/equipe3.webp" alt="Funcionario 3"> <a class="btn" href="#"> Dr. Théo</a> <br> <p>Bem-estar e Relaxamento</p> </div>
                 
 
             </div>
@@ -153,15 +199,32 @@
 
     <footer>
       <div style="max-width: 1024px; margin: auto"></div>
-      
-
+      <h4>Redes sociais</h4>
+      <br>
+      <a href="https://www.instagram.com" target="_blank">
+      <img class="redes-sociais" src="img/Instagram.webp" alt="Logo instagram">
+      </a>
+      <a href="https://www.tiktok.com" target="_blank">
+      <img class="redes-sociais" src="img/Tiktok.webp" alt="Logo tiktok">
+      </a>
+      <a href="https://www.youtube.com/" target="_blank">
+      <img class="redes-sociais" src="img/Youtube.webp" alt="Logo youtube">
+      </a>
+      <br> <br>
       <p>
+
         Contato: francisTec@gmail.com <br />
         <br />
         WhatsApp: (11) 98235-7611 <br />
         <br />
         CNPJ: 40.963.840/0001.74
       </p>
+      <br>
+      
+     
+
     </footer>
+
+  <script src="script.js"></script>
   </body>
 </html>

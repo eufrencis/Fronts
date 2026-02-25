@@ -91,10 +91,15 @@ aside {
   margin-bottom: 3.8%;
 }
 
-h1 {
+h1 {color: var(--indig);
+}
+
+h2{ color: var(--indig)
+
 }
 aside h2 {
   text-align: center;
+ 
 }
 
 h3 {
@@ -102,6 +107,18 @@ h3 {
   font-size: 3rem;
   text-shadow: 1px 1px 2px var(--preto);
 }
+
+P#servicos{
+  text-align: center;
+  color: var(--indig);
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-decoration: underline;
+
+
+
+}
+
 
 .video {
   display: block;
@@ -129,6 +146,7 @@ h3 {
   margin: auto;
   gap: 10px;
   height: auto;
+  h2{text-align: center;}
 }
 a{
   text-decoration: none;
@@ -156,6 +174,13 @@ a:hover{background-color: var(--viodk); font-size: 1.25rem;}
   max-width: 100%; /* Não deixa a imagem "vazar" da tela */
   height: auto;
 }
+ /*Deixa o meio rosado */
+.img-site{
+  width: 100%;
+  padding-top: 2%;
+  background: radial-gradient(var(--orchd), var(--branco), var(--branco));
+  border-radius: 100%;
+}
 
 #whats {
   width: 90px;
@@ -166,6 +191,8 @@ a:hover{background-color: var(--viodk); font-size: 1.25rem;}
   text-align: center;
   margin: 6rem;
   p{color: black};
+  a{background: transparent !important;}
+  z-index: 1;
 }
 
 /* Flex-box */
@@ -178,6 +205,7 @@ a:hover{background-color: var(--viodk); font-size: 1.25rem;}
   max-width: 100%;
   gap: 8px;
   padding: auto;
+  text-align: center;
 }
 
 footer {
@@ -189,6 +217,20 @@ footer {
   top: 0px;
   width: 100%;
   z-index: 1000;
+  a{background: transparent !important;} /* Tira a marcacao roxa ao passar o mouse */
+}
+
+
+
+.redes-sociais{
+  width: 30px;
+  transition: transform 0.3s;
+  margin: 0 5px;
+  
+}
+
+.redes-sociais:hover {
+    transform: scale(1.2); /* O ícone aumenta um pouquinho quando passa o mouse */
 }
 
 @media (max-width: 700px) {
